@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DiseasePredict</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="yangsheng">养生</string>
+    <string name="yuce">预测</string>
+    <string name="dangan">档案</string>
+    <string name="nianling">年龄</string>
+    <string name="xingbie">性别</string>
+    <string name="cp">cp</string>
+    <string name="trestbps">trestbps</string>
+    <string name="chol">chol</string>
+    <string name="fbs">fbs</string>
+    <string name="restecg">restecg</string>
+    <string name="exang">exang</string>
+    <string name="oldpeak">oldpeak</string>
+    <string name="slope">slope</string>
+    <string name="ca">ca</string>
+    <string name="thal">thal</string>
+</resources>
