@@ -8,14 +8,16 @@
     <string name="dangan">档案</string>
     <string name="nianling">年龄</string>
     <string name="xingbie">性别</string>
-    <string name="cp">cp</string>
-    <string name="trestbps">trestbps</string>
-    <string name="chol">chol</string>
-    <string name="fbs">fbs</string>
-    <string name="restecg">restecg</string>
-    <string name="exang">exang</string>
-    <string name="oldpeak">oldpeak</string>
-    <string name="slope">slope</string>
-    <string name="ca">ca</string>
-    <string name="thal">thal</string>
+    <string name="cp">胸痛类型</string>
+    <string name="trestbps">静息血压</string>
+    <string name="chol">血清胆固醇</string>
+    <string name="fbs">空腹血糖</string>
+    <string name="restecg">休息心电图结果</string>
+    <string name="exang">运动诱发心绞痛</string>
+    <string name="thalach"> 达到的最大心脏率</string>
+    <string name="oldpeak">在运动高峰ST段的斜率</string>
+    <string name="slope">在运动高峰ST段的斜率</string>
+    <string name="ca">用荧光标记的大血管</string>
+    <string name="thal">缺陷类型</string>
+    <string name="startpredict">开始预测</string>
 </resources>

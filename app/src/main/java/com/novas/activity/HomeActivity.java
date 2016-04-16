@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
+import android.view.Window;
 
 import com.novas.controller.HomeController;
 import com.novas.diseasepredict.R;
@@ -38,12 +39,14 @@ public class HomeActivity extends AppCompatActivity
     private String mClassName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         homeController=HomeController.getHomeControllerInstance(this);
         homeController.addFragment(R.id.home_tab_container,"yangshengFragment");
         homeController.addFragment(R.id.home_tab_container,"yuceFragment");
-        homeController.addFragment(R.id.home_tab_container,"danganfragment");
+        homeController.addFragment(R.id.home_tab_container, "danganfragment");
         homeController.showFragment("yuceFragment");
+     //   this.requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 }

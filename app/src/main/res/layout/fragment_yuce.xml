@@ -40,6 +40,7 @@
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="男"
             SexSwitch:rightoptiontext="女"
+            android:id="@+id/sexswitch1"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -120,6 +121,7 @@
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="是"
             SexSwitch:rightoptiontext="否"
+            android:id="@+id/sexswitch2"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -154,12 +156,33 @@
             android:gravity="center|right"
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
+            android:text="@string/thalach"
+            android:textSize="@dimen/activity_text_22sp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/activity_text_14sp"
+            android:hint="达到的最大心脏率"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="@dimen/activity_width_100dp"
+            android:gravity="center|right"
+            android:layout_marginRight="@dimen/activity_padding_15dp"
+            android:layout_height="match_parent"
             android:text="@string/exang"
             android:textSize="@dimen/activity_text_22sp"
             />
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="是"
             SexSwitch:rightoptiontext="否"
+            android:id="@+id/sexswitch3"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -244,4 +267,10 @@
             android:hint="请输入用户年龄"
             />
     </LinearLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_40dp"
+        android:background="@color/green"
+        android:text="@string/startpredict"
+        />
 </LinearLayout>

@@ -134,25 +134,28 @@ public class SexSwitch extends View
     @Override
     public boolean onTouchEvent(MotionEvent event) {
        // return super.onTouchEvent(event);
-        System.out.println(event.getRawX()+"  "+width);
-        if(event.getRawX()<width/2+left)
-        {
-            if(listener!=null)
+        System.out.println(event.getRawX()+"  "+width+"  left="+left);
+        System.out.println(event.getRawY()+"  "+height+"  top="+top+"  "+this.getTop());
+            System.out.println("Id="+this.getId());
+            if(event.getRawX()<width/2+left)
             {
-                listener.onSelect(LEFT_SELECTED);
+                if(listener!=null)
+                {
+                    System.out.println("左");
+                    listener.onSelect(LEFT_SELECTED);
+                }
+                leftcolor=Color.parseColor("#00cc00");
+                rightcolor=Color.GREEN;
             }
-            leftcolor=Color.parseColor("#00cc00");
-            rightcolor=Color.GREEN;
-        }
-        else
-        {
-            if(listener!=null)
+            else
             {
-                listener.onSelect(RIGHT_SELECTED);
+                if(listener!=null)
+                {
+                    listener.onSelect(RIGHT_SELECTED);
+                }
+                rightcolor=Color.parseColor("#00cc00");
+                leftcolor=Color.GREEN;
             }
-            rightcolor=Color.parseColor("#00cc00");
-            leftcolor=Color.GREEN;
-        }
         this.postInvalidate();
         return true;
     }
@@ -162,7 +165,7 @@ class onSwitchListener implements SwitchListener
 {
     @Override
     public void onSelect(int select) {
-
+        System.out.println("select="+select);
     }
 }
 //0
