@@ -2,8 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:SexSwitch="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_40dp"
+        android:gravity="center|left"
+        android:layout_gravity="center"
+        android:text="@string/jbyc"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/activity_20dp"
+        android:textSize="@dimen/activity_text_22sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="@dimen/activity_width_100dp"
+            android:gravity="center|right"
+            android:layout_marginRight="@dimen/activity_padding_15dp"
+            android:layout_height="match_parent"
+            android:text="@string/name"
+            android:textSize="@dimen/activity_text_10sp"
+            />
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/activity_text_10sp"
+            android:hint="请输入患者姓名"
+            />
+        </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="@dimen/activity_40dp"
@@ -15,12 +45,13 @@
         android:layout_marginRight="@dimen/activity_padding_15dp"
         android:layout_height="match_parent"
         android:text="@string/nianling"
-        android:textSize="@dimen/activity_text_22sp"
+        android:textSize="@dimen/activity_text_10sp"
         />
     <EditText
+        android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="@dimen/activity_text_14sp"
+        android:textSize="@dimen/activity_text_10sp"
         android:hint="请输入用户年龄"
         />
 </LinearLayout>
@@ -35,12 +66,12 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/xingbie"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="男"
             SexSwitch:rightoptiontext="女"
-            android:id="@+id/sexswitch1"
+            android:id="@+id/sex"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -56,13 +87,14 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/cp"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+        <Spinner
+            android:id="@+id/cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:entries="@array/cp"
             />
     </LinearLayout>
     <LinearLayout
@@ -76,13 +108,14 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/trestbps"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <EditText
+            android:id="@+id/trestbps"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+            android:textSize="@dimen/activity_text_10sp"
+            android:hint="入院时测量的，mm 汞"
             />
     </LinearLayout>
     <LinearLayout
@@ -96,13 +129,14 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/chol"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <EditText
+            android:id="@+id/chol"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+            android:textSize="@dimen/activity_text_10sp"
+            android:hint="毫克/分升"
             />
     </LinearLayout>
     <LinearLayout
@@ -116,12 +150,12 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/fbs"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="是"
             SexSwitch:rightoptiontext="否"
-            android:id="@+id/sexswitch2"
+            android:id="@+id/fbs"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -137,14 +171,14 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/restecg"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
-            />
+       <Spinner
+           android:id="@+id/restcg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:entries="@array/restecg"
+           ></Spinner>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -157,12 +191,13 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/thalach"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <EditText
+            android:id="@+id/thalach"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
+            android:textSize="@dimen/activity_text_10sp"
             android:hint="达到的最大心脏率"
             />
     </LinearLayout>
@@ -177,12 +212,12 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/exang"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <com.novas.UI.SexSwitch
             SexSwitch:leftoptiontext="是"
             SexSwitch:rightoptiontext="否"
-            android:id="@+id/sexswitch3"
+            android:id="@+id/exang"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -198,13 +233,14 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/oldpeak"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
         <EditText
+            android:id="@+id/oldpeak"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+            android:textSize="@dimen/activity_text_10sp"
+            android:hint="由运动相对的休息诱发的ST段压低"
             />
     </LinearLayout>
     <LinearLayout
@@ -218,13 +254,13 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/slope"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+        <Spinner
+            android:id="@+id/slope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/slope"
             />
     </LinearLayout>
     <LinearLayout
@@ -238,13 +274,13 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/ca"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+        <Spinner
+            android:id="@+id/ca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/ca"
             />
     </LinearLayout>
     <LinearLayout
@@ -258,19 +294,22 @@
             android:layout_marginRight="@dimen/activity_padding_15dp"
             android:layout_height="match_parent"
             android:text="@string/thal"
-            android:textSize="@dimen/activity_text_22sp"
+            android:textSize="@dimen/activity_text_10sp"
             />
-        <EditText
+        <Spinner
+            android:id="@+id/thal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/activity_text_14sp"
-            android:hint="请输入用户年龄"
+            style="@style/spinnerstyle"
+            android:entries="@array/thal"
             />
     </LinearLayout>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="@dimen/activity_40dp"
+        android:id="@+id/startPredict"
         android:background="@color/green"
+        android:onClick="onClick"
         android:text="@string/startpredict"
         />
 </LinearLayout>

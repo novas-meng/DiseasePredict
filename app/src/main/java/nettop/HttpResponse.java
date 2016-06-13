@@ -5,7 +5,7 @@ package nettop;
  */
 public class HttpResponse
 {
-    byte[] bytes;
+    public byte[] bytes;
     public HttpResponse(byte[] bytes)
     {
         this.bytes=bytes;

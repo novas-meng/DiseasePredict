@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.novas.controller.HomeController;
 import com.novas.diseasepredict.R;
 
 /**
@@ -14,6 +15,7 @@ import com.novas.diseasepredict.R;
  */
 public class yuceFragment extends Fragment
 {
+    HomeController homeController;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class yuceFragment extends Fragment
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        homeController=HomeController.getHomeControllerInstance(null);
+        homeController.initPredict();
     }
 }

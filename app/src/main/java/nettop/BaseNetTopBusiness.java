@@ -75,7 +75,7 @@ public class BaseNetTopBusiness {
             byte[] b=null;
             int i=0;
             int j=0;
-            System.out.println(new String(bytes,0,length,"gbk"));
+          //  System.out.println(new String(bytes,0,length,"gbk"));
             //  byte[] temp=new byte[0];
             int bytelength=0;
             for(i=0;i<length-1;i++)
@@ -85,7 +85,7 @@ public class BaseNetTopBusiness {
                     if(bytes[i+2]==13&&bytes[i+3]==10&&bytes[i+4]==13&&bytes[i+5]==10)
                     {
                         j=i+6;
-                        System.out.println("===="+bytes[i+2]+"  "+bytes[i+3]+"  "+bytes[i+4]+"  "+bytes[i+5]+" "+bytes[i+6]);
+                      //  System.out.println("===="+bytes[i+2]+"  "+bytes[i+3]+"  "+bytes[i+4]+"  "+bytes[i+5]+" "+bytes[i+6]);
                         break;
                     }
                     b=new byte[i-loc];
@@ -94,7 +94,7 @@ public class BaseNetTopBusiness {
                     loc=i+2;
                     // System.out.println(new String(b,"gbk"));
                     String s=new String(b,"gbk");
-                    System.out.println("s=" + s);
+                  //  System.out.println("s=" + s);
                     if(s.contains("Content-Length"))
                     {
                         String[] args=s.split(":");
@@ -103,7 +103,7 @@ public class BaseNetTopBusiness {
                 }
             }
             int templength=length-j;
-         //   System.out.println("bytelength="+bytelength+"j="+j+"templength="+templength);
+       //     System.out.println("bytelength="+bytelength+"j="+j+"templength="+templength);
          //   System.out.println("=====8888="+bytes[length-4]+"  "+bytes[length-3]+"  "+bytes[length-2]+"   "+bytes[length-1]);
             byte[] dest=new byte[bytelength-2];
             loc=0;
@@ -128,7 +128,7 @@ public class BaseNetTopBusiness {
             byte[] desttemp=new byte[dest.length-2];
             System.arraycopy(dest,0,desttemp,0,desttemp.length);
             response=new HttpResponse(desttemp);
-          //  System.out.println("string=" + new String(dest, "gbk"));
+         //   System.out.println("string=" + new String(dest, "gbk"));
            // listener.onSuccess(response);
             center.postSuccess(response,listener);
         } catch (MalformedURLException e) {

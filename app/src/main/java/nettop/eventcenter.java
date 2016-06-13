@@ -14,14 +14,11 @@ import java.util.concurrent.Executors;
 public class eventcenter {
     public static eventcenter center=null;
     Hashtable<Object,NetTopListener> listenerHashtable=new Hashtable<>();
-    Handler h=new Handler() {
+    Handler h=new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
             System.out.println("receive");
-            if(Looper.myLooper()==Looper.getMainLooper())
-            {
-                System.out.println("主线程运行");
-            }
+
             if(msg.what==1)
             {
                 System.out.println("receive");
@@ -62,9 +59,16 @@ public class eventcenter {
     }
     public  void postSuccess(HttpResponse response,NetTopListener listener)
     {
+       // Handler handler=new Handler();
           System.out.println("in put table");
-          listenerHashtable.put(response,listener);
-          h.obtainMessage(1,response).sendToTarget();
+          listenerHashtable.put(response, listener);
+        Message message=Message.obtain();
+        message.setTarget(h);
+        message.what=1;
+        message.obj=response;
+        message.sendToTarget();
+        //  h.obtainMessage(1,response).sendToTarget();
+          System.out.println("发送消息");
     }
     public static eventcenter getCenterInstance()
     {

@@ -15,9 +15,42 @@
     <string name="restecg">休息心电图结果</string>
     <string name="exang">运动诱发心绞痛</string>
     <string name="thalach"> 达到的最大心脏率</string>
-    <string name="oldpeak">在运动高峰ST段的斜率</string>
+    <string name="oldpeak">由运动相对的休息诱发的ST段压低</string>
     <string name="slope">在运动高峰ST段的斜率</string>
     <string name="ca">用荧光标记的大血管</string>
     <string name="thal">缺陷类型</string>
     <string name="startpredict">开始预测</string>
+    <string name="jbyc">疾病预测</string>
+    <string name="persontext">病人档案</string>
+    <string name="profiletext">预测记录</string>
+    <string name="searchtext">浏览记录</string>
+    <string name="name">姓名</string>
+    <string-array name="cp">
+        <item>典型心绞痛</item>
+        <item>非典型心绞痛</item>
+        <item>非心绞痛</item>
+        <item>无症状</item>
+    </string-array>
+    <string-array name="restecg" >
+        <item >正常</item>
+        <item>有ST-T波异常</item>
+        <item>由埃斯蒂斯的准则，显示可能或肯定左心室肥厚</item>
+    </string-array>
+    <string-array name="slope">
+        <item>向上倾斜</item>
+        <item>平滑</item>
+        <item>向下倾斜</item>
+    </string-array>
+    <string-array name="thal">
+        <item>正常</item>
+        <item>固定性缺陷</item>
+        <item>可逆性缺陷</item>
+    </string-array>
+    <string-array name="ca">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>

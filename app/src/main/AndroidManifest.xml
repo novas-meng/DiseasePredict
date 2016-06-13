@@ -17,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.novas.activity.ResultActivity"></activity>
+        <activity android:name="com.novas.activity.PageActivity"></activity>
+        <activity android:name="com.novas.activity.UserinfoActivity"></activity>
+        <activity android:name="com.novas.activity.userListActivity"></activity>
+        <activity android:name="com.novas.activity.userTimeActivity"></activity>
+        <activity android:name="com.novas.activity.LookPageListActivity"></activity>
     </application>
-
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

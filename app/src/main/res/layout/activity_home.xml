@@ -28,6 +28,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@drawable/activity_home_tab_color_text"
                 android:textSize="@dimen/activity_text_22sp"
+                android:id="@+id/tab1text"
                 android:text="@string/yangsheng"
                 />
             <View
@@ -52,6 +53,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@drawable/activity_home_tab_color_text"
                 android:textSize="@dimen/activity_text_22sp"
+                android:id="@+id/tab2text"
                 android:text="@string/yuce"
                 />
             <View
@@ -77,6 +79,7 @@
                 android:textColor="@drawable/activity_home_tab_color_text"
                 android:textSize="@dimen/activity_text_22sp"
                 android:text="@string/dangan"
+                android:id="@+id/tab3text"
                 />
             <View
                 android:layout_width="match_parent"

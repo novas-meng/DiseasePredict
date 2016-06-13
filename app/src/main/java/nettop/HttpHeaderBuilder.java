@@ -137,7 +137,7 @@ public class HttpHeaderBuilder {
         sb.append("Content-Type: application/x-www-form-urlencoded;charset=gbk\r\n");
         sb.append("\r\n");
         sb.append(params+"\r\n");
-        sb.append("\r\n");
+      //  sb.append("\r\n");
         sb.append("\r\n");
         outputStream.write(sb.toString().getBytes("gbk"));
     }

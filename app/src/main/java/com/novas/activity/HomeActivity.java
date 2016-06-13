@@ -12,8 +12,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
+import android.view.View;
 import android.view.Window;
 
+import com.example.novas.myndk.NDK;
 import com.novas.controller.HomeController;
 import com.novas.diseasepredict.R;
 import com.novas.fragment.yangshengFragment;
@@ -47,6 +49,21 @@ public class HomeActivity extends AppCompatActivity
         homeController.addFragment(R.id.home_tab_container,"yuceFragment");
         homeController.addFragment(R.id.home_tab_container, "danganfragment");
         homeController.showFragment("yuceFragment");
+        new NDK().socket();
      //   this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    }
+    public void onClick(View v)
+    {
+        if(v.getId()==R.id.startPredict)
+        {
+            System.out.println("开始预测");
+            homeController.startPredict();
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("on destroy");
+        homeController.destroy();
     }
 }

@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:height">30dp</item>
         <item name="android:layout_height">20dp</item>
@@ -16,6 +16,9 @@
         <item name="android:paddingLeft">21dp</item>
         <item name="android:paddingRight">21dp</item>
         <item name="android:textColor">@color/button_text_color</item>
+    </style>
+    <style name="spinnerstyle">
+        <item name="android:textSize">10sp</item>
     </style>
     <style name="login_blue_button" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">fill_parent</item>
